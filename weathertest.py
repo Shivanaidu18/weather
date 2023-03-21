@@ -7,11 +7,11 @@ from PIL import Image
 logo = Image.open('logo1.png')
 #pip install pandas numpy matplotlib seaborn streamlit
 #to run strealit :   streamlit run test2.py 
-st.set_page_config(page_title="Employee  EDA", page_icon=":bar_chart:", layout="wide")
+st.set_page_config(page_title="Weather  EDA", page_icon=":bar_chart:", layout="wide")
 st.image(logo)
-st.title("Employee Dataset EDA")
+st.title("Weather Dataset EDA")
 # File upload
-uploaded_file = st.file_uploader("Choose a Employee Dataset csv")
+uploaded_file = st.file_uploader("Choose a Weather Dataset csv")
 if uploaded_file is not None:
     data=pd.read_csv(uploaded_file)
     st.dataframe(data)
